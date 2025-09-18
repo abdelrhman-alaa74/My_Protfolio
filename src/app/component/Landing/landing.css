@@ -1,0 +1,41 @@
+.landingText{
+    animation-name: textShow;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease;
+}
+.landingTextStop{
+    animation: none;
+}
+.landingPhoto{
+    animation-name: photoShow;
+    animation-duration: 1.5s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease;
+}
+
+
+@keyframes textShow{
+    0%{
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    30%{
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 100;
+    }
+}
+@keyframes photoShow{
+    0%{
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 100;
+    }
+}
