@@ -1,11 +1,28 @@
-import React from 'react'
+'use client';
+
+
+import React, { useEffect, useState } from 'react'
 
 //icons
 import { BsArrowUpRightSquareFill } from "react-icons/bs";
 
 function Projects() {
-return (
-    <div className="max-w-300 mx-auto mb-50 px-5" id="projects">
+    const [animation, setAnimation] = useState(false);
+        useEffect(() => {
+        const handleScroll = () => {
+        if (window.scrollY > 1200) {
+            setAnimation(true);
+        } else {
+            setAnimation(false);
+        }; 
+    }
+    handleScroll();
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+        },[])
+    return (
+        <div id="projects">
+    <div className={`max-w-300 mx-auto mb-50 px-5 duration-500 ${animation ? 'transform translate-y-0 opacity-100' : 'transform translate-y-100 opacity-0'}`}>
         <h1 className='text-5xl font-bold'>My Portfolio highlights</h1>
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 mt-10'>
             <div className=''>
@@ -142,7 +159,8 @@ return (
             </div>
 
         </div>
-    </div> 
+            </div>
+    </div>        
 )
 }
 

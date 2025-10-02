@@ -1,4 +1,7 @@
-import React from 'react'
+'use client';
+
+
+import React, { useEffect, useState } from 'react'
 
 //icons
 import { FaMagic } from "react-icons/fa";
@@ -14,8 +17,22 @@ import { IoDiamond } from "react-icons/io5";
 
 
 function Services() {
-return (
-<div className='mb-75 max-w-300 mx-auto px-5' id='services'>
+    const [animation, setAnimation] = useState(false);
+            useEffect(() => {
+            const handleScroll = () => {
+            if (window.scrollY > 2000) {
+                setAnimation(true);
+            } else {
+                setAnimation(false);
+            }; 
+        }
+        handleScroll();
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+            },[])
+    return (
+<div id='services'>
+    <div className={`mb-75 max-w-300 mx-auto px-5 duration-500 ${animation ? 'transform translate-y-0 opacity-100' : 'transform translate-y-100 opacity-0'}`} >
         <h1 className='text-5xl font-bold'>Our Services</h1>
         <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 mt-10'>
             <div className='p-2 py-6 lg:p-4 lg:py-8 bg-neutral-800 rounded-2xl text-center'>
@@ -62,7 +79,8 @@ return (
             </div>
 
         </div>
-</div>
+            </div>
+    </div>
 )
 }
 

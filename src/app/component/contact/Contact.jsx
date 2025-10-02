@@ -1,4 +1,5 @@
 'use client';
+import { useEffect, useState } from 'react'
 
 import React, { useRef } from 'react'
 import emailjs from 'emailjs-com'
@@ -10,7 +11,8 @@ import { FaInstagram, FaFacebook } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
 
 function Contact() {
-const form = useRef();
+    const [animation, setAnimation] = useState(false);
+    const form = useRef();
 
 const sendEmail = (e) => {
     e.preventDefault();
@@ -27,9 +29,21 @@ const sendEmail = (e) => {
     alert("Error : " + error.text);
     });
 };
-
-return (
-    <div className='mb-50 max-w-300 mx-auto grid grid-cols-1 px-5 md:grid-cols-2 gap-5' id='contact'>
+    useEffect(() => {
+        const handleScroll = () => {
+        if (window.scrollY > 3000) {
+            setAnimation(true);
+        } else {
+            setAnimation(false);
+        }; 
+        }
+        handleScroll();
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    },[])
+    return (
+    <div id='contact'>
+    <div className={`mb-50 max-w-300 mx-auto grid grid-cols-1 px-5 md:grid-cols-2 gap-5 duration-500 ${animation ? 'transform translate-y-0 opacity-100' : 'transform translate-y-100 opacity-0'}`} >
     <div className='text-center md:text-start mb-10 md:mb-0'>
         <h2 className='text-5xl font-bold'>Contact me for collaboration</h2>
         <p className='md:max-w-75 mt-10 text-neutral-500'>
@@ -65,6 +79,7 @@ return (
         </form>
         </div>
     </div>
+            </div>
     </div>
 )
 }

@@ -1,4 +1,7 @@
-import React from 'react'
+'use client';
+
+
+import React, { useEffect, useState } from 'react'
 
 //icons
 import { FaHtml5 } from "react-icons/fa6";   
@@ -13,8 +16,22 @@ import { SiMysql } from "react-icons/si";
 import { FaLaravel } from "react-icons/fa";
 
 function Skills() {
-return (
-<div className='px-5 lg:px-0 max-w-150 md:max-w-200 lg:max-w-250 xl:max-w-300 mx-auto mb-40 mt-30'>
+    const [animation, setAnimation] = useState(false);
+    useEffect(() => {
+    const handleScroll = () => {
+    if (window.scrollY > 700) {
+        setAnimation(true);
+    } else {
+        setAnimation(false);
+    }; 
+}
+handleScroll();
+window.addEventListener('scroll', handleScroll);
+return () => window.removeEventListener('scroll', handleScroll);
+    },[])
+    return (
+    <div>
+<div className={`px-5 lg:px-0 max-w-150 md:max-w-200 lg:max-w-250 xl:max-w-300 mx-auto mb-40 mt-30 duration-500 ${animation ? 'transform translate-y-0 opacity-100' : 'transform translate-y-100 opacity-0'}`}>
         <h2 className='text-5xl font-bold mb-5'>Tools | Skills </h2>
         <p className='mb-10 max-w-130'>Discover the powerful tools and technologies I use to create exceptional, high-performing websites & applications.</p>
     <div className='grid grid-cols-12 gap-2'>
@@ -106,7 +123,8 @@ return (
                 </div>
             </div> 
     </div>
-</div>
+            </div>
+    </div>
 )
 }
 
