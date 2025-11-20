@@ -63,15 +63,15 @@ const sendEmail = (e) => {
         <form ref={form} onSubmit={sendEmail} className="space-y-8">
             <div>
                 <label htmlFor="email" className="block mb-2 text-sm font-medium">Your email:</label>
-                <input type="email" name="email" id="email" className="shadow-sm bg-neutral-600 border border-neutral-500 text-sm rounded-lg block w-full p-2.5" placeholder='Enter Your Email' required />
+                <input type="email" name="email" id="email" className="shadow-sm bg-zinc-800 border border-neutral-500 text-sm rounded-lg block w-full p-2.5" placeholder='Enter Your Email' required />
             </div>
             <div>
                 <label htmlFor="subject" className="block mb-2 text-sm font-medium">Subject:</label>
-                <input type="text" name="subject" id="subject" className="block p-3 w-full text-sm bg-neutral-600 border border-neutral-500 rounded-lg shadow-sm" required placeholder='Subject'/>
+                <input type="text" name="subject" id="subject" className="block p-3 w-full text-sm bg-zinc-800 border border-neutral-500 rounded-lg shadow-sm" required placeholder='Subject'/>
             </div>
             <div className="sm:col-span-2">
                 <label htmlFor="message" className="block mb-2 text-sm font-medium">Your message:</label>
-                <textarea name="message" id="message" rows="6" className="block p-2.5 w-full text-sm rounded-lg bg-neutral-600 border border-neutral-500 shadow-sm" required placeholder='Enter Your Message'></textarea>
+                <textarea name="message" id="message" rows="6" className="block p-2.5 w-full text-sm rounded-lg bg-zinc-800 border border-neutral-500 shadow-sm" required placeholder='Enter Your Message'></textarea>
             </div>
             <button type="submit" className="py-3 px-5 md:w-full text-sm font-medium text-center text-white rounded-lg bg-blue-700 sm:w-fit hover:bg-blue-800 cursor-pointer">
                 Send message
