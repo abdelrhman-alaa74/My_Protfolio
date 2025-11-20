@@ -185,7 +185,7 @@ function Projects() {
 
         </div>
             <div className='flex justify-center items-center'>
-                    <button className='duration-300 mt-10 p-2 px-4 bg-blue-500 hover:bg-blue-700 rounded cursor-pointer' onClick={() => setMore(!more)}>{more ? 'Less' : 'More'}</button>
+                    <button className='duration-300 mt-10 p-2 px-5 bg-blue-500 hover:bg-blue-700 rounded cursor-pointer' onClick={() => setMore(!more)}>{more ? 'Less' : 'More'}</button>
             </div>
         </div>
     </div>        
