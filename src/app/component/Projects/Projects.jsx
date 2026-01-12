@@ -53,17 +53,17 @@ function Projects() {
             <div className=''>
                 <div className='bg-neutral-800 p-3 rounded hover:bg-neutral-700'>
                     <div className='overflow-hidden'>
-                        <a href='https://abdelrhman-alaa74.github.io/Html_and_Css_temp2' target='_blank' className=''>
-                            <img src='./images/project2.jpeg' className='rounded hover:scale-110 md:h-68' alt='Project1' />
+                        <a href='https://github.com/abdelrhman-alaa74/Clinics-Project' target='_blank' className=''>
+                            <img src='./images/project7.png' className='rounded hover:scale-110 md:h-68' alt='Project7' />
                         </a>
                     </div>
                     <div className='mt-5 flex gap-2 items-center justify-between'>
                         <div>
-                            <h3 className='text-xl'>PixelFlow & NovaUI</h3>
+                            <h3 className='text-xl'>Mednoiva Clinics</h3>
                             <div className='flex gap-2 my-3'>
-                                <div className='bg-neutral-900 rounded p-1 px-3 shadow-2xl shadow-black'>Html</div>
-                                <div className='bg-neutral-900 rounded p-1 px-3 shadow-2xl shadow-black'>Css</div>
-                                <div className='bg-neutral-900 rounded p-1 px-3 shadow-2xl shadow-black'>Js</div>
+                                <div className='bg-neutral-900 rounded p-1 px-3 shadow-2xl shadow-black'>Php</div>
+                                <div className='bg-neutral-900 rounded p-1 px-3 shadow-2xl shadow-black'>Blade</div>
+                                <div className='bg-neutral-900 rounded p-1 px-3 shadow-2xl shadow-black'>Filament</div>
                             </div>
                         </div>
                         <a href='https://abdelrhman-alaa74.github.io/Html_and_Css_temp2' target='_blank' className='shadow-2xl shadow-blue-400'>
@@ -72,6 +72,7 @@ function Projects() {
                     </div>
                 </div>
             </div>
+
             <div className=''>
                 <div className='bg-neutral-800 p-3 rounded hover:bg-neutral-700'>
                     <div className='overflow-hidden'>
@@ -177,6 +178,29 @@ function Projects() {
                             </div>
                         </div>
                         <a href='https://abdelrhman-alaa74.github.io/Html_and_Css_Template/' target='_blank' className='shadow-2xl shadow-blue-400'>
+                            <BsArrowUpRightSquareFill className='text-4xl text-blue-400 ' />
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div className={`${more ? '' : 'hidden'}`}>
+                <div className='bg-neutral-800 p-3 rounded hover:bg-neutral-700'>
+                    <div className='overflow-hidden'>
+                        <a href='https://abdelrhman-alaa74.github.io/Html_and_Css_temp2' target='_blank' className=''>
+                            <img src='./images/project2.jpeg' className='rounded hover:scale-110 md:h-68' alt='Project1' />
+                        </a>
+                    </div>
+                    <div className='mt-5 flex gap-2 items-center justify-between'>
+                        <div>
+                            <h3 className='text-xl'>PixelFlow & NovaUI</h3>
+                            <div className='flex gap-2 my-3'>
+                                <div className='bg-neutral-900 rounded p-1 px-3 shadow-2xl shadow-black'>Html</div>
+                                <div className='bg-neutral-900 rounded p-1 px-3 shadow-2xl shadow-black'>Css</div>
+                                <div className='bg-neutral-900 rounded p-1 px-3 shadow-2xl shadow-black'>Js</div>
+                            </div>
+                        </div>
+                        <a href='https://abdelrhman-alaa74.github.io/Html_and_Css_temp2' target='_blank' className='shadow-2xl shadow-blue-400'>
                             <BsArrowUpRightSquareFill className='text-4xl text-blue-400 ' />
                         </a>
                     </div>

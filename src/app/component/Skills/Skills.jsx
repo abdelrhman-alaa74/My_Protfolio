@@ -14,6 +14,8 @@ import { RiTailwindCssFill } from "react-icons/ri";
 import { FaPhp } from "react-icons/fa";
 import { SiMysql } from "react-icons/si";
 import { FaLaravel } from "react-icons/fa";
+import { FaVuejs } from "react-icons/fa6";
+
 
 function Skills() {
     const [animation, setAnimation] = useState(false);
@@ -63,6 +65,15 @@ return () => window.removeEventListener('scroll', handleScroll);
                         <p className='text-gray-500'>Interaction</p>
                     </div>
                 </div>
+                <div className='flex items-center gap-5 border border-neutral-700 p-2 rounded-2xl shadow shadow-neutral-800 mb-5 hover:bg-neutral-600 xl:w-95 lg:w-80 '>
+                    <div className='bg-neutral-700 p-2 rounded-2xl'>
+                    <FaVuejs className='text-4xl text-green-400'/>
+                    </div>
+                    <div>
+                        <p className='font-bold'>Vue js</p>
+                        <p className='text-gray-500'>Framework</p>
+                    </div>
+                </div>
             </div> 
             <div className='col-span-12 md:col-span-6 lg:col-span-4'>
                 <div className='flex items-center gap-5 border border-neutral-700 p-2 rounded-2xl shadow shadow-neutral-800 mb-5 hover:bg-neutral-600 xl:w-95 lg:w-80 '>
@@ -93,7 +104,7 @@ return () => window.removeEventListener('scroll', handleScroll);
                     </div>
                 </div>
             </div> 
-            <div className='col-span-12 grid md:grid-cols-2 lg:col-span-4 lg:grid-cols-1 gap-2'>
+            <div className='col-span-12 md:col-span-6 lg:col-span-4'>
                 <div className='flex items-center gap-5 border border-neutral-700 p-2 rounded-2xl shadow shadow-neutral-800 mb-5 hover:bg-neutral-600 xl:w-95 lg:w-80 '>
                     <div className='bg-neutral-700 p-2 rounded-2xl'>
                         <RiTailwindCssFill className='text-4xl text-blue-400 '/>
